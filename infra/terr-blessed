@@ -1,0 +1,996 @@
+E1113 01:11:58.991577     162 lswatcher.go:368] generic::internal: lswatcher: Watch stream unexpectedly closed: RPC::SERVER ERROR (LabelACLRejected): Credential does not permit access to owner=hongzhuq job=envelope realm=corp-humans type=CORP service=Watcher method=Watch (for context and help, please see http://go/loas-restricted-credentials).
+For debugging purposes, these are the current permissions:
+E1113 01:11:58.991652     151 lswatcher.go:368] generic::internal: lswatcher: Watch stream unexpectedly closed: RPC::SERVER ERROR (LabelACLRejected): Credential does not permit access to owner=hongzhuq job=envelope realm=corp-humans type=CORP service=Watcher method=Watch (for context and help, please see http://go/loas-restricted-credentials).
+For debugging purposes, these are the current permissions:
+E1113 01:11:58.991614     136 lswatcher.go:368] generic::internal: lswatcher: Watch stream unexpectedly closed: RPC::SERVER ERROR (LabelACLRejected): Credential does not permit access to owner=hongzhuq job=envelope realm=corp-humans type=CORP service=Watcher method=Watch (for context and help, please see http://go/loas-restricted-credentials).
+For debugging purposes, these are the current permissions:
+E1113 01:11:58.991937     149 lswatcher.go:368] generic::internal: lswatcher: Watch stream unexpectedly closed: RPC::SERVER ERROR (LabelACLRejected): Credential does not permit access to owner=hongzhuq job=envelope realm=corp-humans type=CORP service=Watcher method=Watch (for context and help, please see http://go/loas-restricted-credentials).
+For debugging purposes, these are the current permissions:
+F1113 01:11:58.992315      78 cdd.go:739] Unsafe Chubby ACLs for CDD config; quitting to prevent exploitation: svelte error for "/ls/local/config/cdd/corp/rpcacl_hongzhuq_runner_main": -2
+
+goroutine 78 [running]:
+google3/base/go/log.Fatalf(...)
+	base/go/log.go:716
+google3/chubby/cdd/lib/go/cdd.(*Client).safePath(0xc000c32d20, {0x562d45c03028?, 0xc000daf400?})
+	chubby/cdd/lib/go/cdd.go:739 +0xcc
+google3/chubby/cdd/lib/go/cdd.(*Client).serve(0xc000c32d20)
+	chubby/cdd/lib/go/cdd.go:466 +0x125
+created by google3/chubby/cdd/lib/go/cdd.NewClient in goroutine 28
+	chubby/cdd/lib/go/cdd.go:419 +0x785
+
+F1113 01:11:58.992358      39 cdd.go:739] Unsafe Chubby ACLs for CDD config; quitting to prevent exploitation: svelte error for "/ls/local/config/cdd/corp/rpcacl_hongzhuq_runner_main": -2
+
+goroutine 39 [running]:
+google3/base/go/log.Fatalf(...)
+	base/go/log.go:716
+google3/chubby/cdd/lib/go/cdd.(*Client).safePath(0xc001058000, {0x562d45c03028?, 0xc0013e8000?})
+	chubby/cdd/lib/go/cdd.go:739 +0xcc
+google3/chubby/cdd/lib/go/cdd.(*Client).serve(0xc001058000)
+	chubby/cdd/lib/go/cdd.go:466 +0x125
+created by google3/chubby/cdd/lib/go/cdd.NewClient in goroutine 26
+	chubby/cdd/lib/go/cdd.go:419 +0x785
+
+SIGABRT: abort===== Coroner crash handler initializing. =====
+Opening socket: /var/google/services/logmanagerd/remote_coredump.socket
+===== Failed: connect(AF_UNIX): errno 2 =====
+Opening fallback socket: @remote_coredump
+===== setUpSocketAndCrashReporter: openSocket: connect(AF_UNIX): errno 111 =====
+
+PC=0x562d4062cc2e m=0 sigcode=18446744073709551610
+
+goroutine 39 gp=0xc0013ea380 m=0 mp=0x562d47dc8760 [running, locked to thread]:
+internal/runtime/syscall.Syscall6()
+	third_party/go/gc/src/internal/runtime/syscall/asm_linux_amd64.s:36 +0xe fp=0xc0019c7d30 sp=0xc0019c7d28 pc=0x562d4062cc2e
+syscall.RawSyscall6(0xc001932e27?, 0x19a?, 0x1d9?, 0xc0002f4000?, 0x4?, 0x100?, 0xc0013f0320?)
+	third_party/go/gc/src/syscall/syscall_linux.go:64 +0xd fp=0xc0019c7d78 sp=0xc0019c7d30 pc=0x562d40644e4d
+syscall.RawSyscall(0x562d47dc5c80?, 0x0?, 0x0?, 0xc1c51d17bb262f03?)
+	third_party/go/gc/src/syscall/syscall_linux.go:55 +0x15 fp=0xc0019c7dc0 sp=0xc0019c7d78 pc=0x562d40644e35
+syscall.Tgkill(0xba?, 0x0?, 0x0?)
+	third_party/go/gc/src/syscall/zsyscall_linux_amd64.go:894 +0x25 fp=0xc0019c7df0 sp=0xc0019c7dc0 pc=0x562d406430c5
+google3/base/go/log.abortProcess()
+	base/go/log_file_linux.go:19 +0x8b fp=0xc0019c7e38 sp=0xc0019c7df0 pc=0x562d407d6dab
+google3/base/go/log.ctxfatalf({0x0?, 0x0?}, 0xc000012065?, {0x562d3f442a82?, 0x377248b421?}, {0xc0010132f0?, 0x0?, 0x0?})
+	base/go/log.go:674 +0x5f fp=0xc0019c7ea0 sp=0xc0019c7e38 pc=0x562d407d3e3f
+google3/base/go/log.fatalf(...)
+	base/go/log.go:683
+google3/base/go/log.Fatalf(...)
+	base/go/log.go:716
+google3/chubby/cdd/lib/go/cdd.(*Client).safePath(0xc001058000, {0x562d45c03028?, 0xc0013e8000?})
+	chubby/cdd/lib/go/cdd.go:739 +0xcc fp=0xc0019c7f08 sp=0xc0019c7ea0 pc=0x562d416954cc
+google3/chubby/cdd/lib/go/cdd.(*Client).serve(0xc001058000)
+	chubby/cdd/lib/go/cdd.go:466 +0x125 fp=0xc0019c7fc8 sp=0xc0019c7f08 pc=0x562d41692c25
+google3/chubby/cdd/lib/go/cdd.NewClient.gowrap2()
+	chubby/cdd/lib/go/cdd.go:419 +0x25 fp=0xc0019c7fe0 sp=0xc0019c7fc8 pc=0x562d41692885
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0019c7fe8 sp=0xc0019c7fe0 pc=0x562d40621381
+created by google3/chubby/cdd/lib/go/cdd.NewClient in goroutine 26
+	chubby/cdd/lib/go/cdd.go:419 +0x785
+
+goroutine 1 gp=0xc000002380 m=5 mp=0xc000100008 [running]:
+	goroutine running on other thread; stack unavailable
+
+goroutine 2 gp=0xc000002e00 m=nil [force gc (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b4fa8 sp=0xc0000b4f88 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+runtime.forcegchelper()
+	third_party/go/gc/src/runtime/proc.go:351 +0xb8 fp=0xc0000b4fe0 sp=0xc0000b4fa8 pc=0x562d405e3318
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b4fe8 sp=0xc0000b4fe0 pc=0x562d40621381
+created by runtime.init.7 in goroutine 1
+	third_party/go/gc/src/runtime/proc.go:339 +0x1a
+
+goroutine 3 gp=0xc000003340 m=nil [GC sweep wait]:
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b5780 sp=0xc0000b5760 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+runtime.bgsweep(0xc000074100)
+	third_party/go/gc/src/runtime/mgcsweep.go:317 +0xdf fp=0xc0000b57c8 sp=0xc0000b5780 pc=0x562d405cb1ff
+runtime.gcenable.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:203 +0x25 fp=0xc0000b57e0 sp=0xc0000b57c8 pc=0x562d405bf805
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b57e8 sp=0xc0000b57e0 pc=0x562d40621381
+created by runtime.gcenable in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:203 +0x66
+
+goroutine 4 gp=0xc000003500 m=nil [GC scavenge wait]:
+runtime.gopark(0x7ebaca?, 0x3b9aca00?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b5f78 sp=0xc0000b5f58 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+runtime.(*scavengerState).park(0x562d47dc6040)
+	third_party/go/gc/src/runtime/mgcscavenge.go:426 +0x49 fp=0xc0000b5fa8 sp=0xc0000b5f78 pc=0x562d405c8c49
+runtime.bgscavenge(0xc000074100)
+	third_party/go/gc/src/runtime/mgcscavenge.go:659 +0x59 fp=0xc0000b5fc8 sp=0xc0000b5fa8 pc=0x562d405c91d9
+runtime.gcenable.gowrap2()
+	third_party/go/gc/src/runtime/mgc.go:204 +0x25 fp=0xc0000b5fe0 sp=0xc0000b5fc8 pc=0x562d405bf7a5
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b5fe8 sp=0xc0000b5fe0 pc=0x562d40621381
+created by runtime.gcenable in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:204 +0xa5
+
+goroutine 5 gp=0xc000003dc0 m=nil [finalizer wait]:
+runtime.gopark(0xc0000b4648?, 0x562d405b85a5?, 0xb0?, 0x1?, 0xc000002380?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b4620 sp=0xc0000b4600 pc=0x562d4061910e
+runtime.runfinq()
+	third_party/go/gc/src/runtime/mfinal.go:193 +0x107 fp=0xc0000b47e0 sp=0xc0000b4620 pc=0x562d405be807
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b47e8 sp=0xc0000b47e0 pc=0x562d40621381
+created by runtime.createfing in goroutine 1
+	third_party/go/gc/src/runtime/mfinal.go:163 +0x3d
+
+goroutine 6 gp=0xc00023e380 m=nil [select]:
+runtime.gopark(0xc0000b6778?, 0x3?, 0x0?, 0x40?, 0xc0000b6772?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000c4e10 sp=0xc0000c4df0 pc=0x562d4061910e
+runtime.selectgo(0xc0000c4f78, 0xc0000b676c, 0xc00028fc00?, 0x0, 0x0?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc0000c4f38 sp=0xc0000c4e10 pc=0x562d405f5f85
+google3/third_party/golang/opencensus/stats/view/view.(*worker).start(0xc00028fc00)
+	third_party/golang/opencensus/stats/view/worker.go:276 +0x9f fp=0xc0000c4fc8 sp=0xc0000c4f38 pc=0x562d417811ff
+google3/third_party/golang/opencensus/stats/view/view.init.0.gowrap1()
+	third_party/golang/opencensus/stats/view/worker.go:34 +0x25 fp=0xc0000c4fe0 sp=0xc0000c4fc8 pc=0x562d417805a5
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000c4fe8 sp=0xc0000c4fe0 pc=0x562d40621381
+created by google3/third_party/golang/opencensus/stats/view/view.init.0 in goroutine 1
+	third_party/golang/opencensus/stats/view/worker.go:34 +0x8d
+
+goroutine 7 gp=0xc00023e540 m=nil [chan receive]:
+runtime.gopark(0xc0000b6f60?, 0x562d4073a045?, 0xf0?, 0xd8?, 0x562d45c1c360?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b6f18 sp=0xc0000b6ef8 pc=0x562d4061910e
+runtime.chanrecv(0xc0000ea3f0, 0x0, 0x1)
+	third_party/go/gc/src/runtime/chan.go:640 +0x40b fp=0xc0000b6f90 sp=0xc0000b6f18 pc=0x562d405b056b
+runtime.chanrecv1(0x0?, 0x0?)
+	third_party/go/gc/src/runtime/chan.go:490 +0x12 fp=0xc0000b6fb8 sp=0xc0000b6f90 pc=0x562d405b0132
+runtime.unique_runtime_registerUniqueMapCleanup.func1(...)
+	third_party/go/gc/src/runtime/mgc.go:1742
+runtime.unique_runtime_registerUniqueMapCleanup.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1745 +0x2f fp=0xc0000b6fe0 sp=0xc0000b6fb8 pc=0x562d405c288f
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b6fe8 sp=0xc0000b6fe0 pc=0x562d40621381
+created by unique.runtime_registerUniqueMapCleanup in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1740 +0x96
+
+goroutine 8 gp=0xc00023e700 m=nil [runnable]:
+syscall.Syscall(0x4a, 0x23, 0x0, 0x0)
+	third_party/go/gc/src/syscall/syscall_linux.go:73 +0x25 fp=0xc00048add0 sp=0xc00048ad70 pc=0x562d40644e85
+syscall.Fsync(0x2?)
+	third_party/go/gc/src/syscall/zsyscall_linux_amd64.go:463 +0x25 fp=0xc00048ae00 sp=0xc00048add0 pc=0x562d40642a45
+internal/poll.(*FD).Fsync.func1(...)
+	third_party/go/gc/src/internal/poll/fd_fsync_posix.go:18
+internal/poll.ignoringEINTR(...)
+	third_party/go/gc/src/internal/poll/fd_posix.go:74
+internal/poll.(*FD).Fsync(0x10?)
+	third_party/go/gc/src/internal/poll/fd_fsync_posix.go:17 +0xe7 fp=0xc00048ae70 sp=0xc00048ae00 pc=0x562d4066aec7
+os.(*File).Sync(0xc001a14020)
+	third_party/go/gc/src/os/file_posix.go:166 +0x3b fp=0xc00048aea8 sp=0xc00048ae70 pc=0x562d40679e9b
+google3/base/go/log.(*syncBuffer).Sync(0x562d47dc5d18?)
+	base/go/log_file.go:309 +0x17 fp=0xc00048aec0 sp=0xc00048aea8 pc=0x562d407d5a57
+google3/base/go/log.(*fileSink).flush(0xc00048af80?, 0x70?)
+	base/go/log_file.go:449 +0x85 fp=0xc00048af38 sp=0xc00048aec0 pc=0x562d407d6765
+google3/base/go/log.(*fileSink).flushDaemon(0x562d47dc5d18)
+	base/go/log_file.go:414 +0xcb fp=0xc00048afc8 sp=0xc00048af38 pc=0x562d407d660b
+google3/base/go/log.init.3.gowrap1()
+	base/go/log_file.go:216 +0x25 fp=0xc00048afe0 sp=0xc00048afc8 pc=0x562d407d5445
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00048afe8 sp=0xc00048afe0 pc=0x562d40621381
+created by google3/base/go/log.init.3 in goroutine 1
+	base/go/log_file.go:216 +0x199
+
+goroutine 9 gp=0xc00023ea80 m=nil [sleep]:
+runtime.gopark(0x16c29637e3f5?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b7f78 sp=0xc0000b7f58 pc=0x562d4061910e
+time.Sleep(0xdf8475800)
+	third_party/go/gc/src/runtime/time.go:300 +0xf4 fp=0xc0000b7fb0 sp=0xc0000b7f78 pc=0x562d4061cfb4
+google3/net/base/go/netmon.purgeLoop()
+	net/base/go/netmon.go:227 +0x1d fp=0xc0000b7fe0 sp=0xc0000b7fb0 pc=0x562d40c56f3d
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b7fe8 sp=0xc0000b7fe0 pc=0x562d40621381
+created by google3/net/base/go/netmon.init.0 in goroutine 1
+	net/base/go/netmon.go:234 +0x25
+
+goroutine 10 gp=0xc00023ec40 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b0738 sp=0xc0000b0718 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc0000b07c8 sp=0xc0000b0738 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc0000b07e0 sp=0xc0000b07c8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b07e8 sp=0xc0000b07e0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 18 gp=0xc000102700 m=nil [GC worker (idle)]:
+runtime.gopark(0x16c29a6ae861?, 0x3?, 0x19?, 0xc6?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b6738 sp=0xc0000b6718 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc0000b67c8 sp=0xc0000b6738 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc0000b67e0 sp=0xc0000b67c8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b67e8 sp=0xc0000b67e0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 34 gp=0xc000494000 m=nil [GC worker (idle)]:
+runtime.gopark(0x16c29a675148?, 0x3?, 0x9d?, 0xbf?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b7738 sp=0xc0000b7718 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc0000b77c8 sp=0xc0000b7738 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc0000b77e0 sp=0xc0000b77c8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b77e8 sp=0xc0000b77e0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 19 gp=0xc0001028c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x16c29a6aec40?, 0x3?, 0xc?, 0x89?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc000128738 sp=0xc000128718 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc0001287c8 sp=0xc000128738 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc0001287e0 sp=0xc0001287c8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0001287e8 sp=0xc0001287e0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 11 gp=0xc00023ee00 m=nil [GC worker (idle)]:
+runtime.gopark(0x16c29a6b0085?, 0x1?, 0xea?, 0x35?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b0f38 sp=0xc0000b0f18 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc0000b0fc8 sp=0xc0000b0f38 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc0000b0fe0 sp=0xc0000b0fc8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b0fe8 sp=0xc0000b0fe0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 35 gp=0xc0004941c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x562d47e6f2e0?, 0x3?, 0x3e?, 0xb2?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc000124738 sp=0xc000124718 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc0001247c8 sp=0xc000124738 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc0001247e0 sp=0xc0001247c8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0001247e8 sp=0xc0001247e0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 36 gp=0xc000494380 m=nil [GC worker (idle)]:
+runtime.gopark(0x16c29a6ae77c?, 0x3?, 0xa6?, 0xf4?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc000124f38 sp=0xc000124f18 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc000124fc8 sp=0xc000124f38 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc000124fe0 sp=0xc000124fc8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000124fe8 sp=0xc000124fe0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 20 gp=0xc000102a80 m=nil [GC worker (idle)]:
+runtime.gopark(0x562d47e6f2e0?, 0x3?, 0x6f?, 0x37?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc000128f38 sp=0xc000128f18 pc=0x562d4061910e
+runtime.gcBgMarkWorker(0xc0000ea700)
+	third_party/go/gc/src/runtime/mgc.go:1366 +0xe9 fp=0xc000128fc8 sp=0xc000128f38 pc=0x562d405c1b89
+runtime.gcBgMarkStartWorkers.gowrap1()
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x25 fp=0xc000128fe0 sp=0xc000128fc8 pc=0x562d405c1a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000128fe8 sp=0xc000128fe0 pc=0x562d40621381
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	third_party/go/gc/src/runtime/mgc.go:1282 +0x105
+
+goroutine 50 gp=0xc0006028c0 m=nil [IO wait]:
+runtime.gopark(0xc000d34360?, 0xc000d343c0?, 0x20?, 0x44?, 0xb?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc001095cd8 sp=0xc001095cb8 pc=0x562d4061910e
+runtime.netpollblock(0x562d40642fd8?, 0x405ab826?, 0x2d?)
+	third_party/go/gc/src/runtime/netpoll.go:575 +0xf7 fp=0xc001095d10 sp=0xc001095cd8 pc=0x562d405db8b7
+internal/poll.runtime_pollWait(0x7f8cc8e90950, 0x72)
+	third_party/go/gc/src/runtime/netpoll.go:351 +0x85 fp=0xc001095d30 sp=0xc001095d10 pc=0x562d40618325
+internal/poll.(*pollDesc).wait(0xc0017201e0?, 0xc001095e6b?, 0x1)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc001095d58 sp=0xc001095d30 pc=0x562d4066b6c7
+internal/poll.(*pollDesc).waitRead(...)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0017201e0, {0xc001095e6b, 0x10000, 0x10000})
+	third_party/go/gc/src/internal/poll/fd_unix.go:165 +0x27a fp=0xc001095df0 sp=0xc001095d58 pc=0x562d4066c9ba
+os.(*File).read(...)
+	third_party/go/gc/src/os/file_posix.go:29
+os.(*File).Read(0xc0000b8290, {0xc001095e6b?, 0xc000d35440?, 0xc000d354a0?})
+	third_party/go/gc/src/os/file.go:124 +0x4f fp=0xc001095e30 sp=0xc001095df0 pc=0x562d406785af
+google3/third_party/golang/fsnotify/fsnotify.(*Watcher).readEvents(0xc001714b90)
+	third_party/golang/fsnotify/backend_inotify.go:356 +0xc5 fp=0xc0010a5fc8 sp=0xc001095e30 pc=0x562d409265c5
+google3/third_party/golang/fsnotify/fsnotify.NewWatcher.gowrap1()
+	third_party/golang/fsnotify/backend_inotify.go:150 +0x25 fp=0xc0010a5fe0 sp=0xc0010a5fc8 pc=0x562d40925a65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0010a5fe8 sp=0xc0010a5fe0 pc=0x562d40621381
+created by google3/third_party/golang/fsnotify/fsnotify.NewWatcher in goroutine 1
+	third_party/golang/fsnotify/backend_inotify.go:150 +0x186
+
+goroutine 51 gp=0xc000602a80 m=nil [select]:
+runtime.gopark(0xc00012be60?, 0x4?, 0x80?, 0x2a?, 0xc00012bdb0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000c7c48 sp=0xc0000c7c28 pc=0x562d4061910e
+runtime.selectgo(0xc0000c7e60, 0xc00012bda8, 0x0?, 0x0, 0x0?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc0000c7d70 sp=0xc0000c7c48 pc=0x562d405f5f85
+google3/production/machine_locality/lib/go/machinelocality.(*Client).watchLoop(0xc0003f7b20)
+	production/machine_locality/lib/go/client.go:554 +0x22c fp=0xc0000c7fc8 sp=0xc0000c7d70 pc=0x562d409296cc
+google3/production/machine_locality/lib/go/machinelocality.New.gowrap1()
+	production/machine_locality/lib/go/client.go:239 +0x25 fp=0xc0000c7fe0 sp=0xc0000c7fc8 pc=0x562d40927ee5
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000c7fe8 sp=0xc0000c7fe0 pc=0x562d40621381
+created by google3/production/machine_locality/lib/go/machinelocality.New in goroutine 1
+	production/machine_locality/lib/go/client.go:239 +0x26f
+
+goroutine 12 gp=0xc000603340 m=nil [sleep]:
+runtime.gopark(0x16c29993ac95?, 0x562d406163bb?, 0x8?, 0x0?, 0x562d452b2240?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc001123f18 sp=0xc001123ef8 pc=0x562d4061910e
+time.Sleep(0x3cc3a75d)
+	third_party/go/gc/src/runtime/time.go:300 +0xf4 fp=0xc001123f50 sp=0xc001123f18 pc=0x562d4061cfb4
+google3/go/server/peakheapz.peakUpdater()
+	go/server/peakheapz_gc.go:50 +0x25 fp=0xc001123fe0 sp=0xc001123f50 pc=0x562d41618725
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc001123fe8 sp=0xc001123fe0 pc=0x562d40621381
+created by google3/go/server/peakheapz.init.0 in goroutine 1
+	go/server/peakheapz_gc.go:24 +0x4b
+
+goroutine 13 gp=0xc0005836c0 m=nil [chan receive]:
+runtime.gopark(0xc001121f18?, 0x562d40d1eaa6?, 0x51?, 0xb0?, 0x15001bcc?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc001121e88 sp=0xc001121e68 pc=0x562d4061910e
+runtime.chanrecv(0xc0000eaee0, 0xc001121fa8, 0x1)
+	third_party/go/gc/src/runtime/chan.go:640 +0x40b fp=0xc001121f00 sp=0xc001121e88 pc=0x562d405b056b
+runtime.chanrecv2(0xc000d718c0?, 0x0?)
+	third_party/go/gc/src/runtime/chan.go:495 +0x12 fp=0xc001121f28 sp=0xc001121f00 pc=0x562d405b0152
+google3/net/rpc/go/rpc.(*logQueue).writer(0xc0002abef0, 0xc0000eaee0)
+	net/rpc/go/binarylog.go:780 +0x7a fp=0xc001121fc0 sp=0xc001121f28 pc=0x562d40d1e6ba
+google3/net/rpc/go/rpc.newLogQueue.gowrap1()
+	net/rpc/go/binarylog.go:651 +0x25 fp=0xc001121fe0 sp=0xc001121fc0 pc=0x562d40d1dfc5
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc001121fe8 sp=0xc001121fe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.newLogQueue in goroutine 1
+	net/rpc/go/binarylog.go:651 +0xb1
+
+goroutine 14 gp=0xc000583880 m=nil [chan receive]:
+runtime.gopark(0xc0003100f0?, 0xe?, 0x62?, 0x23?, 0x11?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000c6f10 sp=0xc0000c6ef0 pc=0x562d4061910e
+runtime.chanrecv(0xc000310070, 0x0, 0x1)
+	third_party/go/gc/src/runtime/chan.go:640 +0x40b fp=0xc0000c6f88 sp=0xc0000c6f10 pc=0x562d405b056b
+runtime.chanrecv1(0xc000356180?, 0x562d40926d67?)
+	third_party/go/gc/src/runtime/chan.go:490 +0x12 fp=0xc0000c6fb0 sp=0xc0000c6f88 pc=0x562d405b0132
+google3/net/rpc/go/rpc.(*HostCongestionMonitor).start(...)
+	net/rpc/go/host_congestion_monitor.go:124
+google3/net/rpc/go/rpc.makeHostCongestionMonitor.gowrap1()
+	net/rpc/go/host_congestion_monitor.go:116 +0x3a fp=0xc0000c6fe0 sp=0xc0000c6fb0 pc=0x562d40d3e99a
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000c6fe8 sp=0xc0000c6fe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.makeHostCongestionMonitor in goroutine 1
+	net/rpc/go/host_congestion_monitor.go:116 +0x145
+
+goroutine 15 gp=0xc000603dc0 m=nil [sleep]:
+runtime.gopark(0x16c299ce6602?, 0xc000311c70?, 0x0?, 0x0?, 0x405da160?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00049c848 sp=0xc00049c828 pc=0x562d4061910e
+time.Sleep(0x2540be400)
+	third_party/go/gc/src/runtime/time.go:300 +0xf4 fp=0xc00049c880 sp=0xc00049c848 pc=0x562d4061cfb4
+google3/go/server/variables.memStatsUpdater()
+	go/server/variables.go:997 +0x258 fp=0xc00049dfe0 sp=0xc00049c880 pc=0x562d4162a5d8
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00049dfe8 sp=0xc00049dfe0 pc=0x562d40621381
+created by google3/go/server/variables.init.1 in goroutine 1
+	go/server/variables.go:916 +0x1a
+
+goroutine 16 gp=0xc000b22000 m=nil [sleep]:
+runtime.gopark(0x16c299d2687e?, 0xffffffffffffffff?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00012a750 sp=0xc00012a730 pc=0x562d4061910e
+time.Sleep(0x2540be400)
+	third_party/go/gc/src/runtime/time.go:300 +0xf4 fp=0xc00012a788 sp=0xc00012a750 pc=0x562d4061cfb4
+google3/go/server/proc.StatusUpdater()
+	go/server/proc_linux.go:52 +0x25 fp=0xc00012a7e0 sp=0xc00012a788 pc=0x562d413d8985
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00012a7e8 sp=0xc00012a7e0 pc=0x562d40621381
+created by google3/go/server/variables.init.3 in goroutine 1
+	go/server/variables_unix.go:209 +0x26
+
+goroutine 66 gp=0xc000b22700 m=nil [sleep]:
+runtime.gopark(0x16c29f3d55a3?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00012af90 sp=0xc00012af70 pc=0x562d4061910e
+time.Sleep(0xb2d05e00)
+	third_party/go/gc/src/runtime/time.go:300 +0xf4 fp=0xc00012afc8 sp=0xc00012af90 pc=0x562d4061cfb4
+google3/base/go/google.startupFlusher()
+	base/go/flush.go:157 +0x18 fp=0xc00012afe0 sp=0xc00012afc8 pc=0x562d407ac4b8
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00012afe8 sp=0xc00012afe0 pc=0x562d40621381
+created by google3/base/go/google.init.0.func1 in goroutine 1
+	base/go/flush.go:150 +0x1a
+
+goroutine 58 gp=0xc000b228c0 m=nil [IO wait]:
+runtime.gopark(0x3fb?, 0x8?, 0x70?, 0x7f?, 0xb?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00126fae8 sp=0xc00126fac8 pc=0x562d4061910e
+runtime.netpollblock(0x562d40642fd8?, 0x405ab826?, 0x2d?)
+	third_party/go/gc/src/runtime/netpoll.go:575 +0xf7 fp=0xc00126fb20 sp=0xc00126fae8 pc=0x562d405db8b7
+internal/poll.runtime_pollWait(0x7f8cc8e90838, 0x72)
+	third_party/go/gc/src/runtime/netpoll.go:351 +0x85 fp=0xc00126fb40 sp=0xc00126fb20 pc=0x562d40618325
+internal/poll.(*pollDesc).wait(0xc001414000?, 0xc001418000?, 0x0)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc00126fb68 sp=0xc00126fb40 pc=0x562d4066b6c7
+internal/poll.(*pollDesc).waitRead(...)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc001414000, {0xc001418000, 0x1000, 0x1000})
+	third_party/go/gc/src/internal/poll/fd_unix.go:165 +0x27a fp=0xc00126fc00 sp=0xc00126fb68 pc=0x562d4066c9ba
+net.(*netFD).Read(0xc001414000, {0xc001418000?, 0xc00126fcc0?, 0x562d40d46c4e?})
+	third_party/go/gc/src/net/fd_posix.go:55 +0x25 fp=0xc00126fc48 sp=0xc00126fc00 pc=0x562d4075ad45
+net.(*conn).Read(0xc00017e090, {0xc001418000?, 0x400?, 0x56d66e2aecf9f0db?})
+	third_party/go/gc/src/net/net.go:194 +0x45 fp=0xc00126fc90 sp=0xc00126fc48 pc=0x562d4076bec5
+bufio.(*Reader).Read(0xc000611440, {0xc0011017a0, 0xc, 0xc00125a0b0?})
+	third_party/go/gc/src/bufio/bufio.go:241 +0x197 fp=0xc00126fcc8 sp=0xc00126fc90 pc=0x562d406a8f37
+google3/net/rpc/go/rpc.(*connReadWriteWatcher).Read(0xc000c7e030, {0xc0011017a0, 0xc00126fd78?, 0xc})
+	net/rpc/go/rpc.go:556 +0x2f fp=0xc00126fd40 sp=0xc00126fcc8 pc=0x562d40d50dcf
+io.ReadAtLeast({0x562d45bc1f80, 0xc000c7e030}, {0xc0011017a0, 0xc, 0xc}, 0xc)
+	third_party/go/gc/src/io/io.go:335 +0x91 fp=0xc00126fd88 sp=0xc00126fd40 pc=0x562d40661f71
+io.ReadFull(...)
+	third_party/go/gc/src/io/io.go:354
+google3/net/rpc/go/rpc.(*conn).startReadRPC(0xc001416000, {0x562d45bc1e20, 0xc001736a38})
+	net/rpc/go/message.go:464 +0xfa fp=0xc00126fe58 sp=0xc00126fd88 pc=0x562d40d4607a
+google3/net/rpc/go/rpc.(*netAddrConn).reader(0xc001272008, 0xc001416000)
+	net/rpc/go/client.go:2099 +0xcd fp=0xc00126ffc0 sp=0xc00126fe58 pc=0x562d40d2bfad
+google3/net/rpc/go/rpc.(*netAddrConn).dialer.gowrap1()
+	net/rpc/go/client.go:1529 +0x25 fp=0xc00126ffe0 sp=0xc00126ffc0 pc=0x562d40d27285
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00126ffe8 sp=0xc00126ffe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.(*netAddrConn).dialer in goroutine 54
+	net/rpc/go/client.go:1529 +0x4cd
+
+goroutine 59 gp=0xc000b22a80 m=nil [sync.Cond.Wait]:
+runtime.gopark(0xc000d70ae0?, 0x0?, 0x0?, 0x60?, 0x562d4061910e?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00126de08 sp=0xc00126dde8 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+sync.runtime_notifyListWait(0xc0012502b8, 0x1)
+	third_party/go/gc/src/runtime/sema.go:587 +0x15a fp=0xc00126de58 sp=0xc00126de08 pc=0x562d4061ae1a
+sync.(*Cond).Wait(0xc00126deb8?)
+	third_party/go/gc/src/sync/cond.go:71 +0x85 fp=0xc00126de98 sp=0xc00126de58 pc=0x562d40632925
+google3/net/rpc/go/rpc.(*eventQueue).pop(0xc0012502a0)
+	net/rpc/go/sync.go:163 +0x45 fp=0xc00126dec0 sp=0xc00126de98 pc=0x562d40d79385
+google3/net/rpc/go/rpc.NewStreamImpl.func1()
+	net/rpc/go/stream.go:470 +0xf2 fp=0xc00126dfe0 sp=0xc00126dec0 pc=0x562d40d6dd12
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00126dfe8 sp=0xc00126dfe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.NewStreamImpl in goroutine 24
+	net/rpc/go/stream.go:466 +0xc14
+
+goroutine 69 gp=0xc000b22c40 m=9 mp=0xc000518808 [syscall]:
+syscall.Syscall6(0xf7, 0x3, 0x17, 0xc0000b25d0, 0x4, 0xc00124c090, 0x0)
+	third_party/go/gc/src/syscall/syscall_linux.go:95 +0x39 fp=0xc0000b2590 sp=0xc0000b2530 pc=0x562d40644f19
+os.(*Process).pidfdWait(0x0?)
+	third_party/go/gc/src/os/pidfd_linux.go:110 +0x236 fp=0xc0000b26c0 sp=0xc0000b2590 pc=0x562d4067cd16
+os.(*Process).wait(0x0?)
+	third_party/go/gc/src/os/exec_unix.go:27 +0x25 fp=0xc0000b26e0 sp=0xc0000b26c0 pc=0x562d40677c45
+os.(*Process).Wait(...)
+	third_party/go/gc/src/os/exec.go:358
+os/exec.(*Cmd).Wait(0xc0014e8180)
+	third_party/go/gc/src/os/exec/exec.go:922 +0x45 fp=0xc0000b2740 sp=0xc0000b26e0 pc=0x562d406a5945
+google3/tech/env/go/envelope.watchEnvelope(0x0?, 0x0?)
+	tech/env/go/envelope.go:388 +0x45 fp=0xc0000b27c0 sp=0xc0000b2740 pc=0x562d40ef2ba5
+google3/tech/env/go/envelope.launch.gowrap1()
+	tech/env/go/envelope.go:501 +0x25 fp=0xc0000b27e0 sp=0xc0000b27c0 pc=0x562d40ef4225
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b27e8 sp=0xc0000b27e0 pc=0x562d40621381
+created by google3/tech/env/go/envelope.launch in goroutine 1
+	tech/env/go/envelope.go:501 +0xfdf
+
+goroutine 22 gp=0xc000b22e00 m=nil [select]:
+runtime.gopark(0xc000499f80?, 0x3?, 0xa5?, 0x85?, 0xc000499f7a?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc000499e18 sp=0xc000499df8 pc=0x562d4061910e
+runtime.selectgo(0xc000499f80, 0xc000499f74, 0x562d47dc5c80?, 0x0, 0x562d40ef41e5?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc000499f40 sp=0xc000499e18 pc=0x562d405f5f85
+google3/production/fireaxe/go/watcher/actionupdatescheduler.(*Scheduler).run(0xc0012e4440)
+	production/fireaxe/go/watcher/actionupdatescheduler.go:88 +0x85 fp=0xc000499fc8 sp=0xc000499f40 pc=0x562d41677ce5
+google3/production/fireaxe/go/watcher/actionupdatescheduler.New.gowrap1()
+	production/fireaxe/go/watcher/actionupdatescheduler.go:64 +0x25 fp=0xc000499fe0 sp=0xc000499fc8 pc=0x562d41677b65
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000499fe8 sp=0xc000499fe0 pc=0x562d40621381
+created by google3/production/fireaxe/go/watcher/actionupdatescheduler.New in goroutine 1
+	production/fireaxe/go/watcher/actionupdatescheduler.go:64 +0x147
+
+goroutine 21 gp=0xc000b22fc0 m=nil [select]:
+runtime.gopark(0xc00111ff70?, 0x4?, 0x8?, 0x0?, 0xc00111fe78?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00111fcf8 sp=0xc00111fcd8 pc=0x562d4061910e
+runtime.selectgo(0xc00111ff70, 0xc00111fe70, 0x4?, 0x0, 0xc0010f8600?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc00111fe20 sp=0xc00111fcf8 pc=0x562d405f5f85
+google3/go/server/shutdown.lameducker()
+	go/server/shutdown.go:125 +0x169 fp=0xc00111ffe0 sp=0xc00111fe20 pc=0x562d415c53c9
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00111ffe8 sp=0xc00111ffe0 pc=0x562d40621381
+created by google3/go/server/shutdown.init.0.func1 in goroutine 1
+	go/server/shutdown.go:38 +0x1a
+
+goroutine 72 gp=0xc000b23180 m=nil [select]:
+runtime.gopark(0xc0000b3f38?, 0x2?, 0x8?, 0x8?, 0xc0000b3efc?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0010f5d80 sp=0xc0010f5d60 pc=0x562d4061910e
+runtime.selectgo(0xc0010f5f38, 0xc0000b3ef8, 0x0?, 0x0, 0x0?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc0010f5ea8 sp=0xc0010f5d80 pc=0x562d405f5f85
+google3/perftools/tracing/go/tracesink.envelopeWriter(0xc0011e5ad0)
+	perftools/tracing/go/tracesink.go:285 +0x1e5 fp=0xc0010f5fc8 sp=0xc0010f5ea8 pc=0x562d40bb3025
+google3/perftools/tracing/go/tracesink.init.0.func1.gowrap1()
+	perftools/tracing/go/tracesink.go:571 +0x25 fp=0xc0010f5fe0 sp=0xc0010f5fc8 pc=0x562d40bb5445
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0010f5fe8 sp=0xc0010f5fe0 pc=0x562d40621381
+created by google3/perftools/tracing/go/tracesink.init.0.func1 in goroutine 1
+	perftools/tracing/go/tracesink.go:571 +0x21b
+
+goroutine 73 gp=0xc000b23340 m=nil [sleep]:
+runtime.gopark(0x16c29f92c7cd?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0000b1790 sp=0xc0000b1770 pc=0x562d4061910e
+time.Sleep(0xdf8475800)
+	third_party/go/gc/src/runtime/time.go:300 +0xf4 fp=0xc0000b17c8 sp=0xc0000b1790 pc=0x562d4061cfb4
+google3/net/rpc/go/rpc.init.3.func1.1()
+	net/rpc/go/binarylog.go:840 +0x1d fp=0xc0000b17e0 sp=0xc0000b17c8 pc=0x562d40d8389d
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000b17e8 sp=0xc0000b17e0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.init.3.func1 in goroutine 1
+	net/rpc/go/binarylog.go:838 +0x25
+
+goroutine 74 gp=0xc000b23500 m=nil [select]:
+runtime.gopark(0xc000486c08?, 0x2?, 0x0?, 0x0?, 0xc000486c04?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc000486aa8 sp=0xc000486a88 pc=0x562d4061910e
+runtime.selectgo(0xc000486c08, 0xc000486c00, 0x0?, 0x0, 0x2?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc000486bd0 sp=0xc000486aa8 pc=0x562d405f5f85
+google3/net/rpc/go/bytestream.(*listener).Accept(0x0?)
+	net/rpc/go/bytestream.go:118 +0x65 fp=0xc000486c40 sp=0xc000486bd0 pc=0x562d41652ee5
+google3/net/rpc/go/autobahn.ServeLoop({0x562d45bfff10, 0xc00103b580}, 0xc0002aba90)
+	net/rpc/go/autobahn.go:40 +0x71 fp=0xc000486fb8 sp=0xc000486c40 pc=0x562d41657fb1
+google3/net/rpc/go/autobahn.initAutobahn.gowrap1()
+	net/rpc/go/autobahn.go:28 +0x28 fp=0xc000486fe0 sp=0xc000486fb8 pc=0x562d41657f08
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000486fe8 sp=0xc000486fe0 pc=0x562d40621381
+created by google3/net/rpc/go/autobahn.initAutobahn in goroutine 1
+	net/rpc/go/autobahn.go:28 +0xf8
+
+goroutine 75 gp=0xc000b23880 m=nil [chan receive]:
+runtime.gopark(0xc000dc6160?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc000125f00 sp=0xc000125ee0 pc=0x562d4061910e
+runtime.chanrecv(0xc000dc60e0, 0xc000125fb8, 0x1)
+	third_party/go/gc/src/runtime/chan.go:640 +0x40b fp=0xc000125f78 sp=0xc000125f00 pc=0x562d405b056b
+runtime.chanrecv2(0x0?, 0x0?)
+	third_party/go/gc/src/runtime/chan.go:495 +0x12 fp=0xc000125fa0 sp=0xc000125f78 pc=0x562d405b0152
+google3/production/dependency/rpc/outboundacl/go/outboundacl.getAndPushSDCFUpdatesPeriodically.func1()
+	production/dependency/rpc/outboundacl/go/sdcf.go:373 +0x4e fp=0xc000125fe0 sp=0xc000125fa0 pc=0x562d40eee6ee
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000125fe8 sp=0xc000125fe0 pc=0x562d40621381
+created by google3/production/dependency/rpc/outboundacl/go/outboundacl.getAndPushSDCFUpdatesPeriodically in goroutine 1
+	production/dependency/rpc/outboundacl/go/sdcf.go:372 +0xbf
+
+goroutine 57 gp=0xc0011441c0 m=3 mp=0xc0000bb008 [syscall]:
+runtime.notetsleepg(0x562d47e6e180, 0xffffffffffffffff)
+	third_party/go/gc/src/runtime/lock_futex.go:246 +0x29 fp=0xc00111dfa0 sp=0xc00111df78 pc=0x562d405b6349
+os/signal.signal_recv()
+	third_party/go/gc/src/runtime/sigqueue.go:152 +0x29 fp=0xc00111dfc0 sp=0xc00111dfa0 pc=0x562d4061b689
+os/signal.loop()
+	third_party/go/gc/src/os/signal/signal_unix.go:23 +0x13 fp=0xc00111dfe0 sp=0xc00111dfc0 pc=0x562d415ae493
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00111dfe8 sp=0xc00111dfe0 pc=0x562d40621381
+created by os/signal.Notify.func1.1 in goroutine 29
+	third_party/go/gc/src/os/signal/signal.go:152 +0x1f
+
+goroutine 40 gp=0xc001144700 m=nil [IO wait]:
+runtime.gopark(0x400?, 0x8?, 0x70?, 0x7f?, 0xb?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00191bae8 sp=0xc00191bac8 pc=0x562d4061910e
+runtime.netpollblock(0x562d40642fd8?, 0x405ab826?, 0x2d?)
+	third_party/go/gc/src/runtime/netpoll.go:575 +0xf7 fp=0xc00191bb20 sp=0xc00191bae8 pc=0x562d405db8b7
+internal/poll.runtime_pollWait(0x7f8cc8e904f0, 0x72)
+	third_party/go/gc/src/runtime/netpoll.go:351 +0x85 fp=0xc00191bb40 sp=0xc00191bb20 pc=0x562d40618325
+internal/poll.(*pollDesc).wait(0xc00128f700?, 0xc001701000?, 0x0)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc00191bb68 sp=0xc00191bb40 pc=0x562d4066b6c7
+internal/poll.(*pollDesc).waitRead(...)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc00128f700, {0xc001701000, 0x1000, 0x1000})
+	third_party/go/gc/src/internal/poll/fd_unix.go:165 +0x27a fp=0xc00191bc00 sp=0xc00191bb68 pc=0x562d4066c9ba
+net.(*netFD).Read(0xc00128f700, {0xc001701000?, 0xc00191bcc0?, 0x562d40d46c4e?})
+	third_party/go/gc/src/net/fd_posix.go:55 +0x25 fp=0xc00191bc48 sp=0xc00191bc00 pc=0x562d4075ad45
+net.(*conn).Read(0xc001017358, {0xc001701000?, 0x400?, 0x4ca8953af6e4c10b?})
+	third_party/go/gc/src/net/net.go:194 +0x45 fp=0xc00191bc90 sp=0xc00191bc48 pc=0x562d4076bec5
+bufio.(*Reader).Read(0xc0012de8a0, {0xc001101b40, 0xc, 0xc00125a2c0?})
+	third_party/go/gc/src/bufio/bufio.go:241 +0x197 fp=0xc00191bcc8 sp=0xc00191bc90 pc=0x562d406a8f37
+google3/net/rpc/go/rpc.(*connReadWriteWatcher).Read(0xc0012e3440, {0xc001101b40, 0xc00191bd78?, 0xc})
+	net/rpc/go/rpc.go:556 +0x2f fp=0xc00191bd40 sp=0xc00191bcc8 pc=0x562d40d50dcf
+io.ReadAtLeast({0x562d45bc1f80, 0xc0012e3440}, {0xc001101b40, 0xc, 0xc}, 0xc)
+	third_party/go/gc/src/io/io.go:335 +0x91 fp=0xc00191bd88 sp=0xc00191bd40 pc=0x562d40661f71
+io.ReadFull(...)
+	third_party/go/gc/src/io/io.go:354
+google3/net/rpc/go/rpc.(*conn).startReadRPC(0xc001145a40, {0x562d45bc1e20, 0xc0018903f8})
+	net/rpc/go/message.go:464 +0xfa fp=0xc00191be58 sp=0xc00191bd88 pc=0x562d40d4607a
+google3/net/rpc/go/rpc.(*netAddrConn).reader(0xc0012f9008, 0xc001145a40)
+	net/rpc/go/client.go:2099 +0xcd fp=0xc00191bfc0 sp=0xc00191be58 pc=0x562d40d2bfad
+google3/net/rpc/go/rpc.(*netAddrConn).dialer.gowrap1()
+	net/rpc/go/client.go:1529 +0x25 fp=0xc00191bfe0 sp=0xc00191bfc0 pc=0x562d40d27285
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00191bfe8 sp=0xc00191bfe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.(*netAddrConn).dialer in goroutine 98
+	net/rpc/go/client.go:1529 +0x4cd
+
+goroutine 60 gp=0xc0011448c0 m=nil [sync.Cond.Wait]:
+runtime.gopark(0x562d45245820?, 0x562d405b7b34?, 0x0?, 0x0?, 0xc001250230?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0015e1e68 sp=0xc0015e1e48 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+sync.runtime_notifyListWait(0xc001279288, 0x0)
+	third_party/go/gc/src/runtime/sema.go:587 +0x15a fp=0xc0015e1eb8 sp=0xc0015e1e68 pc=0x562d4061ae1a
+sync.(*Cond).Wait(0xc001279008?)
+	third_party/go/gc/src/sync/cond.go:71 +0x85 fp=0xc0015e1ef8 sp=0xc0015e1eb8 pc=0x562d40632925
+google3/net/rpc/go/rpc.(*streamImpl).sender(0xc001279008)
+	net/rpc/go/stream.go:1525 +0x1fb fp=0xc0015e1f68 sp=0xc0015e1ef8 pc=0x562d40d7671b
+google3/net/rpc/go/rpc.NewStreamImpl.func2()
+	net/rpc/go/stream.go:521 +0x74 fp=0xc0015e1fe0 sp=0xc0015e1f68 pc=0x562d40d6da14
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0015e1fe8 sp=0xc0015e1fe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.NewStreamImpl in goroutine 24
+	net/rpc/go/stream.go:519 +0xc73
+
+goroutine 79 gp=0xc001144a80 m=nil [select, locked to thread]:
+runtime.gopark(0xc00049bfa8?, 0x2?, 0xa8?, 0xbe?, 0xc00049bf94?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00049be30 sp=0xc00049be10 pc=0x562d4061910e
+runtime.selectgo(0xc00049bfa8, 0xc00049bf90, 0x0?, 0x0, 0x673?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc00049bf58 sp=0xc00049be30 pc=0x562d405f5f85
+runtime.ensureSigM.func1()
+	third_party/go/gc/src/runtime/signal_unix.go:1082 +0x19b fp=0xc00049bfe0 sp=0xc00049bf58 pc=0x562d40612f1b
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00049bfe8 sp=0xc00049bfe0 pc=0x562d40621381
+created by runtime.ensureSigM in goroutine 29
+	third_party/go/gc/src/runtime/signal_unix.go:1065 +0xc8
+
+goroutine 29 gp=0xc001144c40 m=nil [chan receive]:
+runtime.gopark(0x562d415adc85?, 0x562d455899e0?, 0x1?, 0xf3?, 0xc0013e2f78?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0013e2ee8 sp=0xc0013e2ec8 pc=0x562d4061910e
+runtime.chanrecv(0xc000dc62a0, 0xc0013e2fb0, 0x1)
+	third_party/go/gc/src/runtime/chan.go:640 +0x40b fp=0xc0013e2f60 sp=0xc0013e2ee8 pc=0x562d405b056b
+runtime.chanrecv2(0xc000dc62a0?, 0xc0013e2fc0?)
+	third_party/go/gc/src/runtime/chan.go:495 +0x12 fp=0xc0013e2f88 sp=0xc0013e2f60 pc=0x562d405b0152
+google3/go/server/server.reloader()
+	go/server/signals.go:27 +0x77 fp=0xc0013e2fe0 sp=0xc0013e2f88 pc=0x562d416ba977
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0013e2fe8 sp=0xc0013e2fe0 pc=0x562d40621381
+created by google3/go/server/server.init.3.func1 in goroutine 1
+	go/server/signals.go:21 +0x1a
+
+goroutine 179 gp=0xc000b23a40 m=nil [runnable]:
+syscall.Syscall(0x4a, 0x23, 0x0, 0x0)
+	third_party/go/gc/src/syscall/syscall_linux.go:73 +0x25 fp=0xc0016edde0 sp=0xc0016edd80 pc=0x562d40644e85
+syscall.Fsync(0xc00134a000?)
+	third_party/go/gc/src/syscall/zsyscall_linux_amd64.go:463 +0x25 fp=0xc0016ede10 sp=0xc0016edde0 pc=0x562d40642a45
+internal/poll.(*FD).Fsync.func1(...)
+	third_party/go/gc/src/internal/poll/fd_fsync_posix.go:18
+internal/poll.ignoringEINTR(...)
+	third_party/go/gc/src/internal/poll/fd_posix.go:74
+internal/poll.(*FD).Fsync(0x562d4535a1e0?)
+	third_party/go/gc/src/internal/poll/fd_fsync_posix.go:17 +0xe7 fp=0xc0016ede80 sp=0xc0016ede10 pc=0x562d4066aec7
+os.(*File).Sync(0xc001a14020)
+	third_party/go/gc/src/os/file_posix.go:166 +0x3b fp=0xc0016edeb8 sp=0xc0016ede80 pc=0x562d40679e9b
+google3/base/go/log.(*syncBuffer).Sync(0x562d47dc5d18?)
+	base/go/log_file.go:309 +0x17 fp=0xc0016eded0 sp=0xc0016edeb8 pc=0x562d407d5a57
+google3/base/go/log.(*fileSink).flush(0x0?, 0x0?)
+	base/go/log_file.go:449 +0x85 fp=0xc0016edf48 sp=0xc0016eded0 pc=0x562d407d6765
+google3/base/go/log.(*fileSink).Flush(...)
+	base/go/log_file.go:421
+google3/base/go/log.flushAtExit0.func1()
+	base/go/logflush.go:120 +0x1c fp=0xc0016edf68 sp=0xc0016edf48 pc=0x562d407d9c7c
+google3/base/go/google.flushLIFO({0xc000daf340, 0x0?, 0xc0016edfd0?}, 0xc001a16330)
+	base/go/flush.go:127 +0xb9 fp=0xc0016edfa8 sp=0xc0016edf68 pc=0x562d407ac159
+google3/base/go/google.FlushWithTimeout.func2()
+	base/go/flush.go:87 +0x2c fp=0xc0016edfe0 sp=0xc0016edfa8 pc=0x562d407abf2c
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0016edfe8 sp=0xc0016edfe0 pc=0x562d40621381
+created by google3/base/go/google.FlushWithTimeout in goroutine 78
+	base/go/flush.go:86 +0x2dd
+
+goroutine 77 gp=0xc000b23c00 m=nil [select]:
+runtime.gopark(0xc001403d90?, 0x2?, 0x0?, 0x51?, 0xc001403d4c?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc001403bf0 sp=0xc001403bd0 pc=0x562d4061910e
+runtime.selectgo(0xc001403d90, 0xc001403d48, 0x500000000000008?, 0x1, 0x7f8cc9017d58?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc001403d18 sp=0xc001403bf0 pc=0x562d405f5f85
+google3/chubby/svelte/go/svelte.(*svelteFile).run.func1(0xc000cfea00?)
+	chubby/svelte/go/envsvelte.go:109 +0x133 fp=0xc001403dc0 sp=0xc001403d18 pc=0x562d40e822f3
+google3/chubby/lib/go/lswatcher.watchUpdate(...)
+	chubby/lib/go/lswatcher.go:244
+google3/chubby/lib/go/lswatcher.WatchOpts({0x562d45c01980, 0xc000358230}, {0xc000cfea00, 0x3b}, {{0x0, 0x0, 0x0}, {0x0, 0x0}}, 0xc001480000)
+	chubby/lib/go/lswatcher.go:280 +0x562 fp=0xc001403eb0 sp=0xc001403dc0 pc=0x562d40e7df22
+google3/chubby/lib/go/lswatcher.Watch({0x562d45c01980, 0xc000358230}, {0xc000cfea00, 0x3b}, 0xc001480000)
+	chubby/lib/go/lswatcher.go:236 +0xda fp=0xc001403f60 sp=0xc001403eb0 pc=0x562d40e7d95a
+google3/chubby/svelte/go/svelte.(*svelteFile).run(0xc000daf440, {0x562d45c01980, 0xc000358230})
+	chubby/svelte/go/envsvelte.go:96 +0xb9 fp=0xc001403fb8 sp=0xc001403f60 pc=0x562d40e82159
+google3/chubby/svelte/go/svelte.envOpen.gowrap1()
+	chubby/svelte/go/envsvelte.go:58 +0x28 fp=0xc001403fe0 sp=0xc001403fb8 pc=0x562d40e817a8
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc001403fe8 sp=0xc001403fe0 pc=0x562d40621381
+created by google3/chubby/svelte/go/svelte.envOpen in goroutine 28
+	chubby/svelte/go/envsvelte.go:58 +0x170
+
+goroutine 78 gp=0xc000b23dc0 m=nil [select]:
+runtime.gopark(0xc001889d08?, 0x2?, 0x8?, 0x8?, 0xc001889c5c?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc001889af0 sp=0xc001889ad0 pc=0x562d4061910e
+runtime.selectgo(0xc001889d08, 0xc001889c58, 0x562d47dc5c80?, 0x0, 0x562d4061f394?, 0x1)
+	third_party/go/gc/src/runtime/select.go:336 +0x785 fp=0xc001889c18 sp=0xc001889af0 pc=0x562d405f5f85
+google3/base/go/google.FlushWithTimeout(0x2540be400)
+	base/go/flush.go:91 +0x338 fp=0xc001889d98 sp=0xc001889c18 pc=0x562d407ab938
+google3/base/go/log.flushAtExit0()
+	base/go/logflush.go:123 +0x85 fp=0xc001889e18 sp=0xc001889d98 pc=0x562d407d9b65
+google3/base/go/log.flushAtExit()
+	base/go/logflush.go:90 +0x31 fp=0xc001889e38 sp=0xc001889e18 pc=0x562d407d9ab1
+google3/base/go/log.ctxfatalf({0x0?, 0x0?}, 0xc000012065?, {0x562d3f442a82?, 0x0?}, {0xc001a10140?, 0x0?, 0x0?})
+	base/go/log.go:672 +0x5a fp=0xc001889ea0 sp=0xc001889e38 pc=0x562d407d3e3a
+google3/base/go/log.fatalf(...)
+	base/go/log.go:683
+google3/base/go/log.Fatalf(...)
+	base/go/log.go:716
+google3/chubby/cdd/lib/go/cdd.(*Client).safePath(0xc000c32d20, {0x562d45c03028?, 0xc000daf400?})
+	chubby/cdd/lib/go/cdd.go:739 +0xcc fp=0xc001889f08 sp=0xc001889ea0 pc=0x562d416954cc
+google3/chubby/cdd/lib/go/cdd.(*Client).serve(0xc000c32d20)
+	chubby/cdd/lib/go/cdd.go:466 +0x125 fp=0xc001889fc8 sp=0xc001889f08 pc=0x562d41692c25
+google3/chubby/cdd/lib/go/cdd.NewClient.gowrap2()
+	chubby/cdd/lib/go/cdd.go:419 +0x25 fp=0xc001889fe0 sp=0xc001889fc8 pc=0x562d41692885
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc001889fe8 sp=0xc001889fe0 pc=0x562d40621381
+created by google3/chubby/cdd/lib/go/cdd.NewClient in goroutine 28
+	chubby/cdd/lib/go/cdd.go:419 +0x785
+
+goroutine 81 gp=0xc000ef4380 m=nil [IO wait]:
+runtime.gopark(0x3fb?, 0x8?, 0x70?, 0x7f?, 0xb?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00151dae8 sp=0xc00151dac8 pc=0x562d4061910e
+runtime.netpollblock(0x562d40642fd8?, 0x405ab826?, 0x2d?)
+	third_party/go/gc/src/runtime/netpoll.go:575 +0xf7 fp=0xc00151db20 sp=0xc00151dae8 pc=0x562d405db8b7
+internal/poll.runtime_pollWait(0x7f8cc8e903d8, 0x72)
+	third_party/go/gc/src/runtime/netpoll.go:351 +0x85 fp=0xc00151db40 sp=0xc00151db20 pc=0x562d40618325
+internal/poll.(*pollDesc).wait(0xc0015ed280?, 0xc001674000?, 0x0)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc00151db68 sp=0xc00151db40 pc=0x562d4066b6c7
+internal/poll.(*pollDesc).waitRead(...)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0015ed280, {0xc001674000, 0x1000, 0x1000})
+	third_party/go/gc/src/internal/poll/fd_unix.go:165 +0x27a fp=0xc00151dc00 sp=0xc00151db68 pc=0x562d4066c9ba
+net.(*netFD).Read(0xc0015ed280, {0xc001674000?, 0xc00151dcc0?, 0x562d40d46c4e?})
+	third_party/go/gc/src/net/fd_posix.go:55 +0x25 fp=0xc00151dc48 sp=0xc00151dc00 pc=0x562d4075ad45
+net.(*conn).Read(0xc0000b8ce0, {0xc001674000?, 0x400?, 0x2aafc24b5e560b83?})
+	third_party/go/gc/src/net/net.go:194 +0x45 fp=0xc00151dc90 sp=0xc00151dc48 pc=0x562d4076bec5
+bufio.(*Reader).Read(0xc0015a4e40, {0xc000bf29d0, 0xc, 0xc000d69550?})
+	third_party/go/gc/src/bufio/bufio.go:241 +0x197 fp=0xc00151dcc8 sp=0xc00151dc90 pc=0x562d406a8f37
+google3/net/rpc/go/rpc.(*connReadWriteWatcher).Read(0xc0015f5350, {0xc000bf29d0, 0xc00151dd78?, 0xc})
+	net/rpc/go/rpc.go:556 +0x2f fp=0xc00151dd40 sp=0xc00151dcc8 pc=0x562d40d50dcf
+io.ReadAtLeast({0x562d45bc1f80, 0xc0015f5350}, {0xc000bf29d0, 0xc, 0xc}, 0xc)
+	third_party/go/gc/src/io/io.go:335 +0x91 fp=0xc00151dd88 sp=0xc00151dd40 pc=0x562d40661f71
+io.ReadFull(...)
+	third_party/go/gc/src/io/io.go:354
+google3/net/rpc/go/rpc.(*conn).startReadRPC(0xc001276700, {0x562d45bc1e20, 0xc00122edf8})
+	net/rpc/go/message.go:464 +0xfa fp=0xc00151de58 sp=0xc00151dd88 pc=0x562d40d4607a
+google3/net/rpc/go/rpc.(*netAddrConn).reader(0xc0014a7008, 0xc001276700)
+	net/rpc/go/client.go:2099 +0xcd fp=0xc00151dfc0 sp=0xc00151de58 pc=0x562d40d2bfad
+google3/net/rpc/go/rpc.(*netAddrConn).dialer.gowrap1()
+	net/rpc/go/client.go:1529 +0x25 fp=0xc00151dfe0 sp=0xc00151dfc0 pc=0x562d40d27285
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00151dfe8 sp=0xc00151dfe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.(*netAddrConn).dialer in goroutine 88
+	net/rpc/go/client.go:1529 +0x4cd
+
+goroutine 30 gp=0xc001144e00 m=nil [sync.Cond.Wait]:
+runtime.gopark(0x7f8c81964c68?, 0x7f8cc9016108?, 0x10?, 0x0?, 0xc000580008?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0013e34b0 sp=0xc0013e3490 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+sync.runtime_notifyListWait(0xc001279218, 0x1)
+	third_party/go/gc/src/runtime/sema.go:587 +0x15a fp=0xc0013e3500 sp=0xc0013e34b0 pc=0x562d4061ae1a
+sync.(*Cond).Wait(0x2a063a4878?)
+	third_party/go/gc/src/sync/cond.go:71 +0x85 fp=0xc0013e3540 sp=0xc0013e3500 pc=0x562d40632925
+google3/net/rpc/go/rpc.(*streamImpl).RecvProto(0xc001279008, {0x562d45bd4780, 0xc000daf700})
+	net/rpc/go/stream.go:1063 +0x1f2 fp=0xc0013e36f0 sp=0xc0013e3540 pc=0x562d40d715d2
+google3/net/rpc/go/rpc.(*onceDoneStream).RecvProto(0xc001030c60, {0x562d45bd4780?, 0xc000daf700?})
+	net/rpc/go/stream.go:635 +0x29 fp=0xc0013e3730 sp=0xc0013e36f0 pc=0x562d40d6e849
+google3/net/rpc2/envelope/proto/envelope_control_service_go_proto.(*_EnvelopeControlService_ConnectClientClient).Recv(0xc001025660)
+	blaze-out/k8-opt/bin/net/rpc2/envelope/proto/envelope_control_services.pb.go:254 +0x46 fp=0xc0013e3760 sp=0xc0013e3730 pc=0x562d40e2b466
+google3/tech/env/client/go/envrpc.dialControl.func1()
+	tech/env/client/go/envrpc.go:113 +0x91 fp=0xc0013e37e0 sp=0xc0013e3760 pc=0x562d40e60b11
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0013e37e8 sp=0xc0013e37e0 pc=0x562d40621381
+created by google3/tech/env/client/go/envrpc.dialControl in goroutine 24
+	tech/env/client/go/envrpc.go:111 +0x7fc
+
+goroutine 119 gp=0xc0014c8380 m=nil [IO wait]:
+runtime.gopark(0x3fb?, 0x8?, 0x70?, 0x7f?, 0xb?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00126bae8 sp=0xc00126bac8 pc=0x562d4061910e
+runtime.netpollblock(0x562d40642fd8?, 0x405ab826?, 0x2d?)
+	third_party/go/gc/src/runtime/netpoll.go:575 +0xf7 fp=0xc00126bb20 sp=0xc00126bae8 pc=0x562d405db8b7
+internal/poll.runtime_pollWait(0x7f8cc8e902c0, 0x72)
+	third_party/go/gc/src/runtime/netpoll.go:351 +0x85 fp=0xc00126bb40 sp=0xc00126bb20 pc=0x562d40618325
+internal/poll.(*pollDesc).wait(0xc00150cd80?, 0xc001522000?, 0x0)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc00126bb68 sp=0xc00126bb40 pc=0x562d4066b6c7
+internal/poll.(*pollDesc).waitRead(...)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc00150cd80, {0xc001522000, 0x1000, 0x1000})
+	third_party/go/gc/src/internal/poll/fd_unix.go:165 +0x27a fp=0xc00126bc00 sp=0xc00126bb68 pc=0x562d4066c9ba
+net.(*netFD).Read(0xc00150cd80, {0xc001522000?, 0xc00126bcc0?, 0x562d40d46c4e?})
+	third_party/go/gc/src/net/fd_posix.go:55 +0x25 fp=0xc00126bc48 sp=0xc00126bc00 pc=0x562d4075ad45
+net.(*conn).Read(0xc001195208, {0xc001522000?, 0x400?, 0x56d66e2aecf9f0db?})
+	third_party/go/gc/src/net/net.go:194 +0x45 fp=0xc00126bc90 sp=0xc00126bc48 pc=0x562d4076bec5
+bufio.(*Reader).Read(0xc000d70ea0, {0xc000bf2960, 0xc, 0xc000d69550?})
+	third_party/go/gc/src/bufio/bufio.go:241 +0x197 fp=0xc00126bcc8 sp=0xc00126bc90 pc=0x562d406a8f37
+google3/net/rpc/go/rpc.(*connReadWriteWatcher).Read(0xc0015149f0, {0xc000bf2960, 0xc00126bd78?, 0xc})
+	net/rpc/go/rpc.go:556 +0x2f fp=0xc00126bd40 sp=0xc00126bcc8 pc=0x562d40d50dcf
+io.ReadAtLeast({0x562d45bc1f80, 0xc0015149f0}, {0xc000bf2960, 0xc, 0xc}, 0xc)
+	third_party/go/gc/src/io/io.go:335 +0x91 fp=0xc00126bd88 sp=0xc00126bd40 pc=0x562d40661f71
+io.ReadFull(...)
+	third_party/go/gc/src/io/io.go:354
+google3/net/rpc/go/rpc.(*conn).startReadRPC(0xc000ef4700, {0x562d45bc1e20, 0xc00122eb78})
+	net/rpc/go/message.go:464 +0xfa fp=0xc00126be58 sp=0xc00126bd88 pc=0x562d40d4607a
+google3/net/rpc/go/rpc.(*netAddrConn).reader(0xc000ebd008, 0xc000ef4700)
+	net/rpc/go/client.go:2099 +0xcd fp=0xc00126bfc0 sp=0xc00126be58 pc=0x562d40d2bfad
+google3/net/rpc/go/rpc.(*netAddrConn).dialer.gowrap1()
+	net/rpc/go/client.go:1529 +0x25 fp=0xc00126bfe0 sp=0xc00126bfc0 pc=0x562d40d27285
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00126bfe8 sp=0xc00126bfe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.(*netAddrConn).dialer in goroutine 115
+	net/rpc/go/client.go:1529 +0x4cd
+
+goroutine 128 gp=0xc0014c8540 m=nil [chan receive]:
+runtime.gopark(0xc000a09200?, 0x0?, 0x0?, 0x0?, 0x0?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc001543d58 sp=0xc001543d38 pc=0x562d4061910e
+runtime.chanrecv(0xc000a09180, 0xc001543ef8, 0x1)
+	third_party/go/gc/src/runtime/chan.go:640 +0x40b fp=0xc001543dd0 sp=0xc001543d58 pc=0x562d405b056b
+runtime.chanrecv2(0x0?, 0x0?)
+	third_party/go/gc/src/runtime/chan.go:495 +0x12 fp=0xc001543df8 sp=0xc001543dd0 pc=0x562d405b0152
+google3/security/ganpati/sharded_client/envelope/shardedaclimpl.(*DB).refreshCache(0xc00128ee00)
+	security/ganpati/sharded_client/envelope/shardedaclimpl.go:299 +0x65 fp=0xc001543fc8 sp=0xc001543df8 pc=0x562d41025be5
+google3/security/ganpati/sharded_client/envelope/shardedaclimpl.(*DB).connectToEnvelope.func2.gowrap1()
+	security/ganpati/sharded_client/envelope/shardedaclimpl.go:183 +0x25 fp=0xc001543fe0 sp=0xc001543fc8 pc=0x562d41024de5
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc001543fe8 sp=0xc001543fe0 pc=0x562d40621381
+created by google3/security/ganpati/sharded_client/envelope/shardedaclimpl.(*DB).connectToEnvelope.func2 in goroutine 24
+	security/ganpati/sharded_client/envelope/shardedaclimpl.go:183 +0xf6
+
+goroutine 127 gp=0xc001145c00 m=nil [IO wait]:
+runtime.gopark(0x400?, 0x8?, 0x70?, 0x7f?, 0xb?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00151bae8 sp=0xc00151bac8 pc=0x562d4061910e
+runtime.netpollblock(0x562d40642fd8?, 0x405ab826?, 0x2d?)
+	third_party/go/gc/src/runtime/netpoll.go:575 +0xf7 fp=0xc00151bb20 sp=0xc00151bae8 pc=0x562d405db8b7
+internal/poll.runtime_pollWait(0x7f8cc8e90608, 0x72)
+	third_party/go/gc/src/runtime/netpoll.go:351 +0x85 fp=0xc00151bb40 sp=0xc00151bb20 pc=0x562d40618325
+internal/poll.(*pollDesc).wait(0xc00128f380?, 0xc001700000?, 0x0)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc00151bb68 sp=0xc00151bb40 pc=0x562d4066b6c7
+internal/poll.(*pollDesc).waitRead(...)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc00128f380, {0xc001700000, 0x1000, 0x1000})
+	third_party/go/gc/src/internal/poll/fd_unix.go:165 +0x27a fp=0xc00151bc00 sp=0xc00151bb68 pc=0x562d4066c9ba
+net.(*netFD).Read(0xc00128f380, {0xc001700000?, 0xc00151bcc0?, 0x562d40d46c4e?})
+	third_party/go/gc/src/net/fd_posix.go:55 +0x25 fp=0xc00151bc48 sp=0xc00151bc00 pc=0x562d4075ad45
+net.(*conn).Read(0xc001017338, {0xc001700000?, 0x562d405ba07e?, 0x4c48b6e1770bfca0?})
+	third_party/go/gc/src/net/net.go:194 +0x45 fp=0xc00151bc90 sp=0xc00151bc48 pc=0x562d4076bec5
+bufio.(*Reader).Read(0xc0012de540, {0xc00106e7a0, 0xc, 0xc001900630?})
+	third_party/go/gc/src/bufio/bufio.go:241 +0x197 fp=0xc00151bcc8 sp=0xc00151bc90 pc=0x562d406a8f37
+google3/net/rpc/go/rpc.(*connReadWriteWatcher).Read(0xc0012e2f90, {0xc00106e7a0, 0xc00151bd78?, 0xc})
+	net/rpc/go/rpc.go:556 +0x2f fp=0xc00151bd40 sp=0xc00151bcc8 pc=0x562d40d50dcf
+io.ReadAtLeast({0x562d45bc1f80, 0xc0012e2f90}, {0xc00106e7a0, 0xc, 0xc}, 0xc)
+	third_party/go/gc/src/io/io.go:335 +0x91 fp=0xc00151bd88 sp=0xc00151bd40 pc=0x562d40661f71
+io.ReadFull(...)
+	third_party/go/gc/src/io/io.go:354
+google3/net/rpc/go/rpc.(*conn).startReadRPC(0xc001145340, {0x562d45bc1e20, 0xc0013f48f8})
+	net/rpc/go/message.go:464 +0xfa fp=0xc00151be58 sp=0xc00151bd88 pc=0x562d40d4607a
+google3/net/rpc/go/rpc.(*netAddrConn).reader(0xc0014a6808, 0xc001145340)
+	net/rpc/go/client.go:2099 +0xcd fp=0xc00151bfc0 sp=0xc00151be58 pc=0x562d40d2bfad
+google3/net/rpc/go/rpc.(*netAddrConn).dialer.gowrap1()
+	net/rpc/go/client.go:1529 +0x25 fp=0xc00151bfe0 sp=0xc00151bfc0 pc=0x562d40d27285
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00151bfe8 sp=0xc00151bfe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.(*netAddrConn).dialer in goroutine 84
+	net/rpc/go/client.go:1529 +0x4cd
+
+goroutine 130 gp=0xc000ef4540 m=nil [sync.Cond.Wait]:
+runtime.gopark(0xc0012deae0?, 0x206e69202c736e69?, 0x0?, 0x47?, 0x801bb0a73646e6f?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0014a3e08 sp=0xc0014a3de8 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+sync.runtime_notifyListWait(0xc0012516d8, 0x1)
+	third_party/go/gc/src/runtime/sema.go:587 +0x15a fp=0xc0014a3e58 sp=0xc0014a3e08 pc=0x562d4061ae1a
+sync.(*Cond).Wait(0x8020a041273746e?)
+	third_party/go/gc/src/sync/cond.go:71 +0x85 fp=0xc0014a3e98 sp=0xc0014a3e58 pc=0x562d40632925
+google3/net/rpc/go/rpc.(*eventQueue).pop(0xc0012516c0)
+	net/rpc/go/sync.go:163 +0x45 fp=0xc0014a3ec0 sp=0xc0014a3e98 pc=0x562d40d79385
+google3/net/rpc/go/rpc.NewStreamImpl.func1()
+	net/rpc/go/stream.go:470 +0xf2 fp=0xc0014a3fe0 sp=0xc0014a3ec0 pc=0x562d40d6dd12
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0014a3fe8 sp=0xc0014a3fe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.NewStreamImpl in goroutine 63
+	net/rpc/go/stream.go:466 +0xc14
+
+goroutine 131 gp=0xc001276a80 m=nil [sync.Cond.Wait]:
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0xc0014a5e90?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc0014a5e68 sp=0xc0014a5e48 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+sync.runtime_notifyListWait(0xc00181ae88, 0x0)
+	third_party/go/gc/src/runtime/sema.go:587 +0x15a fp=0xc0014a5eb8 sp=0xc0014a5e68 pc=0x562d4061ae1a
+sync.(*Cond).Wait(0xc00181ac08?)
+	third_party/go/gc/src/sync/cond.go:71 +0x85 fp=0xc0014a5ef8 sp=0xc0014a5eb8 pc=0x562d40632925
+google3/net/rpc/go/rpc.(*streamImpl).sender(0xc00181ac08)
+	net/rpc/go/stream.go:1525 +0x1fb fp=0xc0014a5f68 sp=0xc0014a5ef8 pc=0x562d40d7671b
+google3/net/rpc/go/rpc.NewStreamImpl.func2()
+	net/rpc/go/stream.go:521 +0x74 fp=0xc0014a5fe0 sp=0xc0014a5f68 pc=0x562d40d6da14
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0014a5fe8 sp=0xc0014a5fe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.NewStreamImpl in goroutine 63
+	net/rpc/go/stream.go:519 +0xc73
+
+goroutine 102 gp=0xc001706000 m=nil [sync.Cond.Wait]:
+runtime.gopark(0x7f8c8195f738?, 0x7f8cc9017d58?, 0x10?, 0x0?, 0xc000580008?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc00169d4b0 sp=0xc00169d490 pc=0x562d4061910e
+runtime.goparkunlock(...)
+	third_party/go/gc/src/runtime/proc.go:444
+sync.runtime_notifyListWait(0xc00181ae18, 0x1)
+	third_party/go/gc/src/runtime/sema.go:587 +0x15a fp=0xc00169d500 sp=0xc00169d4b0 pc=0x562d4061ae1a
+sync.(*Cond).Wait(0x0?)
+	third_party/go/gc/src/sync/cond.go:71 +0x85 fp=0xc00169d540 sp=0xc00169d500 pc=0x562d40632925
+google3/net/rpc/go/rpc.(*streamImpl).RecvProto(0xc00181ac08, {0x562d45bd4780, 0xc001255a00})
+	net/rpc/go/stream.go:1063 +0x1f2 fp=0xc00169d6f0 sp=0xc00169d540 pc=0x562d40d715d2
+google3/net/rpc/go/rpc.(*onceDoneStream).RecvProto(0xc001818260, {0x562d45bd4780?, 0xc001255a00?})
+	net/rpc/go/stream.go:635 +0x29 fp=0xc00169d730 sp=0xc00169d6f0 pc=0x562d40d6e849
+google3/net/rpc2/envelope/proto/envelope_control_service_go_proto.(*_EnvelopeControlService_ConnectClientClient).Recv(0xc0015ef360)
+	blaze-out/k8-opt/bin/net/rpc2/envelope/proto/envelope_control_services.pb.go:254 +0x46 fp=0xc00169d760 sp=0xc00169d730 pc=0x562d40e2b466
+google3/tech/env/client/go/envrpcnoloas.dialControl.func1()
+	tech/env/client/go/envrpc_noloas.go:103 +0x91 fp=0xc00169d7e0 sp=0xc00169d760 pc=0x562d40e33dd1
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc00169d7e8 sp=0xc00169d7e0 pc=0x562d40621381
+created by google3/tech/env/client/go/envrpcnoloas.dialControl in goroutine 63
+	tech/env/client/go/envrpc_noloas.go:101 +0x7fc
+
+goroutine 124 gp=0xc000ef48c0 m=nil [IO wait]:
+runtime.gopark(0x3fb?, 0x8?, 0x70?, 0x7f?, 0xb?)
+	third_party/go/gc/src/runtime/proc.go:438 +0xce fp=0xc001519ae8 sp=0xc001519ac8 pc=0x562d4061910e
+runtime.netpollblock(0x562d40642fd8?, 0x405ab826?, 0x2d?)
+	third_party/go/gc/src/runtime/netpoll.go:575 +0xf7 fp=0xc001519b20 sp=0xc001519ae8 pc=0x562d405db8b7
+internal/poll.runtime_pollWait(0x7f8cc8e901a8, 0x72)
+	third_party/go/gc/src/runtime/netpoll.go:351 +0x85 fp=0xc001519b40 sp=0xc001519b20 pc=0x562d40618325
+internal/poll.(*pollDesc).wait(0xc00128fb80?, 0xc001752000?, 0x0)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:84 +0x27 fp=0xc001519b68 sp=0xc001519b40 pc=0x562d4066b6c7
+internal/poll.(*pollDesc).waitRead(...)
+	third_party/go/gc/src/internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc00128fb80, {0xc001752000, 0x1000, 0x1000})
+	third_party/go/gc/src/internal/poll/fd_unix.go:165 +0x27a fp=0xc001519c00 sp=0xc001519b68 pc=0x562d4066c9ba
+net.(*netFD).Read(0xc00128fb80, {0xc001752000?, 0xc001519cc0?, 0x562d40d46c4e?})
+	third_party/go/gc/src/net/fd_posix.go:55 +0x25 fp=0xc001519c48 sp=0xc001519c00 pc=0x562d4075ad45
+net.(*conn).Read(0xc001017390, {0xc001752000?, 0x400?, 0x4897e155c62e6792?})
+	third_party/go/gc/src/net/net.go:194 +0x45 fp=0xc001519c90 sp=0xc001519c48 pc=0x562d4076bec5
+bufio.(*Reader).Read(0xc0012ded20, {0xc000bf2b20, 0xc, 0xc000d69550?})
+	third_party/go/gc/src/bufio/bufio.go:241 +0x197 fp=0xc001519cc8 sp=0xc001519c90 pc=0x562d406a8f37
+google3/net/rpc/go/rpc.(*connReadWriteWatcher).Read(0xc0012e37d0, {0xc000bf2b20, 0xc001519d78?, 0xc})
+	net/rpc/go/rpc.go:556 +0x2f fp=0xc001519d40 sp=0xc001519cc8 pc=0x562d40d50dcf
+io.ReadAtLeast({0x562d45bc1f80, 0xc0012e37d0}, {0xc000bf2b20, 0xc, 0xc}, 0xc)
+	third_party/go/gc/src/io/io.go:335 +0x91 fp=0xc001519d88 sp=0xc001519d40 pc=0x562d40661f71
+io.ReadFull(...)
+	third_party/go/gc/src/io/io.go:354
+google3/net/rpc/go/rpc.(*conn).startReadRPC(0xc001706540, {0x562d45bc1e20, 0xc00122f078})
+	net/rpc/go/message.go:464 +0xfa fp=0xc001519e58 sp=0xc001519d88 pc=0x562d40d4607a
+google3/net/rpc/go/rpc.(*netAddrConn).reader(0xc000ebd808, 0xc001706540)
+	net/rpc/go/client.go:2099 +0xcd fp=0xc001519fc0 sp=0xc001519e58 pc=0x562d40d2bfad
+google3/net/rpc/go/rpc.(*netAddrConn).dialer.gowrap1()
+	net/rpc/go/client.go:1529 +0x25 fp=0xc001519fe0 sp=0xc001519fc0 pc=0x562d40d27285
+runtime.goexit({})
+	third_party/go/gc/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc001519fe8 sp=0xc001519fe0 pc=0x562d40621381
+created by google3/net/rpc/go/rpc.(*netAddrConn).dialer in goroutine 121
+	net/rpc/go/client.go:1529 +0x4cd
+
+rax    0x0
+rbx    0x13dda
+rcx    0x562d4062cc2e
+rdx    0x6
+rdi    0x13dda
+rsi    0x13dda
+rbp    0xc0019c7d68
+rsp    0xc0019c7d28
+r8     0x0
+r9     0x0
+r10    0x0
+r11    0x206
+r12    0x0
+r13    0x5b
+r14    0xc0013ea380
+r15    0xc000d91e20
+rip    0x562d4062cc2e
+rflags 0x206
+cs     0x33
+fs     0x0
+gs     0x0
